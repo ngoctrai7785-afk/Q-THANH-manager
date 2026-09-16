@@ -1,0 +1,3 @@
+Q.THANH Manager - GitHub build
+Icon: QUẢN TRỊ - NT
+APP ID giữ nguyên: NPP_Q_THANH
