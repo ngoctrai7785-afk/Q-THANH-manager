@@ -1,23 +1,32 @@
 {
-  "name": "NPP Q.THANH - Quản lý nội bộ",
-  "short_name": "Q.THANH",
-  "start_url": "./",
+  "name": "QUẢN LÝ KHO AG",
+  "short_name": "KHO AG",
+  "description": "KẾT NỐI - PHÁT TRIỂN",
+  "lang": "vi",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#eef2f5",
-  "theme_color": "#123b5d",
+  "orientation": "any",
+  "background_color": "#111111",
+  "theme_color": "#111111",
   "icons": [
     {
-      "src": "./icon-192.png",
+      "src": "./icon-192.png?v=quan-ly-kho-ag-v101",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "./icon-512.png",
+      "src": "./icon-512.png?v=quan-ly-kho-ag-v101",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-maskable-512.png?v=quan-ly-kho-ag-v101",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
