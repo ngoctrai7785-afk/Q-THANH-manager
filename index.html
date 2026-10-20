@@ -12,11 +12,11 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Q.THANH Manager">
+<meta name="apple-mobile-web-app-title" content="QUẢN LÝ KHO AG">
 <meta charset="utf-8">
 <meta name="app-version" content="259">
 <meta name="app-build" content="an-bui-v259-v87-delete-if-never-sold">
-<title>NPP Q.THANH - Quản lý nội bộ</title>
+<title>QUẢN LÝ KHO AG - Quản lý nội bộ</title>
 <style>
 :root{
   --nav:#0b4f5e;--nav2:#073b47;--bg:#eef2f5;--paper:#fff;--ink:#17324d;
@@ -12481,7 +12481,7 @@ window.AN_BUI_BUILD='an-bui-v259-v90-audit-safe';
 <div class="toast" id="toast"></div>
 
 <script>
-const APP_CONFIG=Object.freeze({"appId":"NPP_Q_THANH","appName":"NPP Q.THANH","unitName":"NPP QUỐC THANH","phone":"","address":"LX","managerPin":"1111","appOpenPin":"1111","theme":"teal","logoDataUrl":"","isMaster":false,"syncEnabled":true,"initialSyncPin":"38985626","publicUrl":"","modules":["dashboard","stockout","stockin","payments","warranty","expenses","warehouse","customers","debts","employees","suppliers","reports","settings"],"appVersion":259,"managedByMaster":true});
+const APP_CONFIG=Object.freeze({"appId":"NPP_Q_THANH","appName":"QUẢN LÝ KHO AG","unitName":"QUẢN LÝ KHO AG","phone":"","address":"LX","managerPin":"1111","appOpenPin":"1111","theme":"teal","logoDataUrl":"","isMaster":false,"syncEnabled":true,"initialSyncPin":"38985626","publicUrl":"","modules":["dashboard","stockout","stockin","payments","warranty","expenses","warehouse","customers","debts","employees","suppliers","reports","settings"],"appVersion":259,"managedByMaster":true});
 const APP_ID=String(APP_CONFIG.appId||'APP').toUpperCase().replace(/[^A-Z0-9_-]/g,'').slice(0,24)||'APP';
 const KEY='manager_'+APP_ID.toLowerCase()+'_legacy_v1';
 let db={};
@@ -43194,7 +43194,7 @@ body.voucher-stockin-active #warehouseInlineEditBtn{display:none!important}
   window.openCustomerReturnV91=function(forceNew=false){
     ensureV91();const page=$('returnsV91'),host=$('returnV91Host');if(!page||!host)return;if(!returnRowsV91.length||forceNew)returnRowsV91=[emptyRowV91()];page.dataset.mode='form';page.dataset.returnType='customer';
     const no=code('TLKH');
-    host.innerHTML=`<div class="return-v91-top-actions"><h3>Phiếu khách hàng trả lại</h3><button class="btn" type="button" onclick="newCustomerReturnV91()">Phiếu mới</button><button class="btn primary" type="button" onclick="saveCustomerReturnV91(false)">Lưu</button><button class="btn primary" type="button" onclick="saveCustomerReturnV91(true)">🖨 Lưu/In</button><button class="btn" type="button" onclick="closeCustomerReturnV91()">← Danh sách</button></div><div class="paper return-v91-paper"><div class="invoice-header"><div class="npp"><b>${esc(db.settings?.name||APP_CONFIG.unitName||APP_CONFIG.appName||'NPP QUỐC THANH')}</b><br>${esc(db.settings?.address||'')}<br>ĐT: ${esc(db.settings?.phone||'')}</div><div class="invoice-title"><h1>PHIẾU KHÁCH HÀNG TRẢ LẠI</h1><div>Ngày: <input id="returnDateV91" type="date" value="${todayYMD()}" style="display:inline-block;width:auto;border:0;background:transparent;font:inherit"></div></div><div class="meta">Số phiếu: <b id="returnNoV91">${esc(no)}</b><br>Tự động nhập kho</div></div><div class="rule"></div><div class="info-grid"><div class="info-box"><h4>Thông tin khách hàng</h4><div class="formline"><label>Tên khách:</label><select id="returnCustomerV91" class="return-v91-customer-select" onchange="returnCustomerChangedV91()"><option value="">-- Chọn khách hàng --</option>${customerOptionsV91()}</select></div><div class="formline"><label>Địa chỉ:</label><input id="returnAddressV91" readonly></div><div class="formline"><label>Điện thoại:</label><input id="returnPhoneV91" readonly></div></div><div class="info-box"><h4>Nội dung</h4><textarea id="returnContentV91">Khách hàng trả lại hàng.</textarea></div></div><div id="returnTableV91" class="return-v91-table-wrap"></div><div class="sum-box return-v91-summary"><div class="sum-row"><div>Tiền hàng trả lại phiếu này</div><div id="returnTotalV91">0 đ</div></div><div class="sum-row"><div>Nợ cũ của khách đến ngày</div><div id="returnOldDebtV91">0 đ</div></div><div class="sum-row"><div><b id="returnAfterLabelV91">Khách hàng còn nợ</b></div><div id="returnAfterV91">0 đ</div></div></div></div>`;
+    host.innerHTML=`<div class="return-v91-top-actions"><h3>Phiếu khách hàng trả lại</h3><button class="btn" type="button" onclick="newCustomerReturnV91()">Phiếu mới</button><button class="btn primary" type="button" onclick="saveCustomerReturnV91(false)">Lưu</button><button class="btn primary" type="button" onclick="saveCustomerReturnV91(true)">🖨 Lưu/In</button><button class="btn" type="button" onclick="closeCustomerReturnV91()">← Danh sách</button></div><div class="paper return-v91-paper"><div class="invoice-header"><div class="npp"><b>${esc(db.settings?.name||APP_CONFIG.unitName||APP_CONFIG.appName||'QUẢN LÝ KHO AG')}</b><br>${esc(db.settings?.address||'')}<br>ĐT: ${esc(db.settings?.phone||'')}</div><div class="invoice-title"><h1>PHIẾU KHÁCH HÀNG TRẢ LẠI</h1><div>Ngày: <input id="returnDateV91" type="date" value="${todayYMD()}" style="display:inline-block;width:auto;border:0;background:transparent;font:inherit"></div></div><div class="meta">Số phiếu: <b id="returnNoV91">${esc(no)}</b><br>Tự động nhập kho</div></div><div class="rule"></div><div class="info-grid"><div class="info-box"><h4>Thông tin khách hàng</h4><div class="formline"><label>Tên khách:</label><select id="returnCustomerV91" class="return-v91-customer-select" onchange="returnCustomerChangedV91()"><option value="">-- Chọn khách hàng --</option>${customerOptionsV91()}</select></div><div class="formline"><label>Địa chỉ:</label><input id="returnAddressV91" readonly></div><div class="formline"><label>Điện thoại:</label><input id="returnPhoneV91" readonly></div></div><div class="info-box"><h4>Nội dung</h4><textarea id="returnContentV91">Khách hàng trả lại hàng.</textarea></div></div><div id="returnTableV91" class="return-v91-table-wrap"></div><div class="sum-box return-v91-summary"><div class="sum-row"><div>Tiền hàng trả lại phiếu này</div><div id="returnTotalV91">0 đ</div></div><div class="sum-row"><div>Nợ cũ của khách đến ngày</div><div id="returnOldDebtV91">0 đ</div></div><div class="sum-row"><div><b id="returnAfterLabelV91">Khách hàng còn nợ</b></div><div id="returnAfterV91">0 đ</div></div></div></div>`;
     addReturnCloseV95(host,window.closeCustomerReturnV91);renderReturnRowsV91();setTimeout(()=>$('returnCustomerV91')?.focus(),40);
   };
   window.returnCustomerChangedV91=function(){const id=$('returnCustomerV91')?.value||'',c=(db.customers||[]).find(x=>String(x.id)===String(id));if($('returnAddressV91'))$('returnAddressV91').value=c?.address||'';if($('returnPhoneV91'))$('returnPhoneV91').value=c?.phone||'';recalcReturnV91()};
@@ -43224,7 +43224,7 @@ body.voucher-stockin-active #warehouseInlineEditBtn{display:none!important}
     if(!isManager){toast('Trả lại Nhà cung cấp chỉ dành cho Quản lý.');return}
     ensureV91();const page=$('returnsV91'),host=$('returnV91Host');if(!page||!host)return;if(!supplierReturnRowsV92.length||forceNew)supplierReturnRowsV92=[emptySupplierReturnRowV92()];page.dataset.mode='form';page.dataset.returnType='supplier';
     const no=code('TLNCC');
-    host.innerHTML=`<div class="return-v91-top-actions"><h3>Phiếu trả lại nhà cung cấp</h3><button class="btn" type="button" onclick="newSupplierReturnV92()">Phiếu mới</button><button class="btn primary" type="button" onclick="saveSupplierReturnV92(false)">Lưu</button><button class="btn primary" type="button" onclick="saveSupplierReturnV92(true)">🖨 Lưu/In</button><button class="btn" type="button" onclick="closeSupplierReturnV92()">← Danh sách</button></div><div class="paper return-v91-paper"><div class="invoice-header"><div class="npp"><b>${esc(db.settings?.name||APP_CONFIG.unitName||APP_CONFIG.appName||'NPP QUỐC THANH')}</b><br>${esc(db.settings?.address||'')}<br>ĐT: ${esc(db.settings?.phone||'')}</div><div class="invoice-title"><h1>PHIẾU TRẢ LẠI NHÀ CUNG CẤP</h1><div>Ngày: <input id="supplierReturnDateV92" type="date" value="${todayYMD()}" style="display:inline-block;width:auto;border:0;background:transparent;font:inherit"></div></div><div class="meta">Số phiếu: <b id="supplierReturnNoV92">${esc(no)}</b><br>Không xử lý kho</div></div><div class="rule"></div><div class="info-grid"><div class="info-box"><h4>Nhà cung cấp</h4><div class="formline"><label>Tên NCC:</label><select id="supplierReturnSupplierV92" class="return-v91-customer-select" onchange="supplierReturnSupplierChangedV92()"><option value="">-- Chọn Nhà cung cấp --</option>${supplierOptionsV92()}</select></div><div class="formline"><label>Địa chỉ:</label><input id="supplierReturnAddressV92" readonly></div><div class="formline"><label>Điện thoại:</label><input id="supplierReturnPhoneV92" readonly></div></div><div class="info-box"><h4>Nội dung</h4><textarea id="supplierReturnContentV92">Trả lại hàng cho Nhà cung cấp.</textarea></div></div><div id="supplierReturnTableV92" class="return-v91-table-wrap"></div><div class="sum-box return-v91-summary"><div class="sum-row"><div>Tiền hàng trả lại phiếu này</div><div id="supplierReturnTotalV92">0 đ</div></div><div class="sum-row"><div>Còn nợ NCC trước phiếu</div><div id="supplierReturnOldDebtV92">0 đ</div></div><div class="sum-row"><div><b id="supplierReturnAfterLabelV92">Còn nợ Nhà cung cấp</b></div><div id="supplierReturnAfterV92">0 đ</div></div></div></div>`;
+    host.innerHTML=`<div class="return-v91-top-actions"><h3>Phiếu trả lại nhà cung cấp</h3><button class="btn" type="button" onclick="newSupplierReturnV92()">Phiếu mới</button><button class="btn primary" type="button" onclick="saveSupplierReturnV92(false)">Lưu</button><button class="btn primary" type="button" onclick="saveSupplierReturnV92(true)">🖨 Lưu/In</button><button class="btn" type="button" onclick="closeSupplierReturnV92()">← Danh sách</button></div><div class="paper return-v91-paper"><div class="invoice-header"><div class="npp"><b>${esc(db.settings?.name||APP_CONFIG.unitName||APP_CONFIG.appName||'QUẢN LÝ KHO AG')}</b><br>${esc(db.settings?.address||'')}<br>ĐT: ${esc(db.settings?.phone||'')}</div><div class="invoice-title"><h1>PHIẾU TRẢ LẠI NHÀ CUNG CẤP</h1><div>Ngày: <input id="supplierReturnDateV92" type="date" value="${todayYMD()}" style="display:inline-block;width:auto;border:0;background:transparent;font:inherit"></div></div><div class="meta">Số phiếu: <b id="supplierReturnNoV92">${esc(no)}</b><br>Không xử lý kho</div></div><div class="rule"></div><div class="info-grid"><div class="info-box"><h4>Nhà cung cấp</h4><div class="formline"><label>Tên NCC:</label><select id="supplierReturnSupplierV92" class="return-v91-customer-select" onchange="supplierReturnSupplierChangedV92()"><option value="">-- Chọn Nhà cung cấp --</option>${supplierOptionsV92()}</select></div><div class="formline"><label>Địa chỉ:</label><input id="supplierReturnAddressV92" readonly></div><div class="formline"><label>Điện thoại:</label><input id="supplierReturnPhoneV92" readonly></div></div><div class="info-box"><h4>Nội dung</h4><textarea id="supplierReturnContentV92">Trả lại hàng cho Nhà cung cấp.</textarea></div></div><div id="supplierReturnTableV92" class="return-v91-table-wrap"></div><div class="sum-box return-v91-summary"><div class="sum-row"><div>Tiền hàng trả lại phiếu này</div><div id="supplierReturnTotalV92">0 đ</div></div><div class="sum-row"><div>Còn nợ NCC trước phiếu</div><div id="supplierReturnOldDebtV92">0 đ</div></div><div class="sum-row"><div><b id="supplierReturnAfterLabelV92">Còn nợ Nhà cung cấp</b></div><div id="supplierReturnAfterV92">0 đ</div></div></div></div>`;
     const supplierMetaV94=host.querySelector('.meta'),supplierMetaBreakV94=supplierMetaV94?.querySelector('br');if(supplierMetaBreakV94?.nextSibling)supplierMetaBreakV94.nextSibling.textContent='Tự động xuất kho';addReturnCloseV95(host,window.closeSupplierReturnV92);renderSupplierReturnRowsV92();setTimeout(()=>$('supplierReturnSupplierV92')?.focus(),40);
   };
   window.closeSupplierReturnV92=function(){const page=$('returnsV91');if(page){page.dataset.mode='home';page.dataset.returnType=''}supplierReturnRowsV92=[];renderReturnHomeV91()};
@@ -43451,5 +43451,49 @@ body.voucher-stockin-active #warehouseInlineEditBtn{display:none!important}
     window.AN_BUI_BUILD='q-thanh-v259-v99-an-bui-feature-parity';
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setTimeout(bootV99,120),{once:true});else setTimeout(bootV99,120);
+})();
+</script>
+<script id="qthanh-v100-rename-manager-js">
+(function(){
+  'use strict';
+  const NEW_NAME='QUẢN LÝ KHO AG';
+  const LEGACY_NAMES=new Set(['NPP Q.THANH','NPP Q THANH','NPP QUỐC THANH','QUỐC THANH','Q.THANH','Q THANH']);
+  function normalizedNameV100(value){
+    return String(value||'').trim().toUpperCase().replace(/\s+/g,' ');
+  }
+  function applyManagerNameV100(){
+    let changed=false;
+    try{
+      if(typeof db!=='undefined'&&db&&db.settings&&LEGACY_NAMES.has(normalizedNameV100(db.settings.name))){
+        db.settings.name=NEW_NAME;
+        changed=true;
+      }
+    }catch(_){ }
+    document.title=NEW_NAME+' - Quản lý nội bộ';
+    const apple=document.querySelector('meta[name="apple-mobile-web-app-title"]');
+    if(apple)apple.setAttribute('content',NEW_NAME);
+    const brand=document.getElementById('brandName');
+    if(brand)brand.textContent=NEW_NAME;
+    const setting=document.getElementById('setName');
+    if(setting&&LEGACY_NAMES.has(normalizedNameV100(setting.value)))setting.value=NEW_NAME;
+    return changed;
+  }
+  const oldRenderV100=window.renderAll;
+  if(typeof oldRenderV100==='function')window.renderAll=function(){
+    applyManagerNameV100();
+    return oldRenderV100.apply(this,arguments);
+  };
+  let checksV100=0;
+  const timerV100=setInterval(function(){
+    checksV100++;
+    const changed=applyManagerNameV100();
+    if(changed&&typeof window.renderAll==='function')window.renderAll();
+    window.Q_THANH_PATCH_VERSION=100;
+    window.Q_THANH_BUILD='quan-ly-kho-ag-v259-v100';
+    if(checksV100>=80)clearInterval(timerV100);
+  },250);
+  applyManagerNameV100();
+  window.Q_THANH_PATCH_VERSION=100;
+  window.Q_THANH_BUILD='quan-ly-kho-ag-v259-v100';
 })();
 </script>
